@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication11.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="fadedtab/fadedtab.css" />
+    <title>Faded Tab by Bryant Smith</title>
+            <script type="text/javascript">
+
+                function showimagepreview(input) {
+
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+
+                            document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
+        </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <div class="logo"></div>
+            <h1>Quest.com</h1>
+            <h2>Search Your Informative Information</h2>
+        </div>
+        <asp:Menu ID="MenuBar" runat="server" Orientation="Horizontal" DisappearAfter="1">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Register.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Anonymous Message/Enter Recipient.aspx" Text="Anonymous Message" Value="Anonymous Message"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Blogs.aspx" Text="All Blogs" Value="All Blogs"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Services.aspx" Text="Services" Value="Services"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#C4C963" ForeColor="#707333" />
+            <StaticMenuItemStyle Font-Bold="True" Font-Names="Arial" Font-Size="Large" ForeColor="#C4C963" HorizontalPadding="20px" ItemSpacing="20px" VerticalPadding="20px" />
+            <%--<StaticSelectedStyle BackColor="#55602D" />--%>
+        </asp:Menu>
+
+        <div id="bottomContent">
+            <div class="navColumn">
+                <div class="overview">
+                    <h2>Latest Blogs</h2>
+                </div>
+                <asp:Menu ID="Menu2" runat="server">
+                    <StaticHoverStyle CssClass="link" />
+                    <StaticMenuItemStyle CssClass="link" />
+                </asp:Menu>
+                <div id="navBottom"></div>
+            </div>
+            <div class="contentColumn">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <div class="contentTop"></div>
+                    <div class="contentMain"></div>
+                    <div class="contentBottom"></div>
+                </asp:ContentPlaceHolder>
+                <div id="footer">
+                    <h2>©<a href="https://www.facebook.com/sajeeb.chandan"> Sajeeb Chandan </a>2017</h2><br/ /><br/ />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

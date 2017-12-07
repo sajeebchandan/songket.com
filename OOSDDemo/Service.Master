@@ -1,0 +1,213 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Service.master.cs" Inherits="OOSDDemo.Service" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="fadedtab/fadedtab.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="caman.full.js"></script>
+    <title></title>
+        <style type="text/css">
+            .w3-btn, .w3-button {
+                border: none;
+                display: inline-block;
+                outline: 0;
+                padding: 8px 16px;
+                vertical-align: middle;
+                overflow: hidden;
+                text-decoration: none;
+                color: inherit;
+                background-color: inherit;
+                text-align: center;
+                cursor: pointer;
+                white-space: nowrap;
+            }
+
+                .w3-btn:hover {
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+                }
+
+            #Background {
+                position: fixed;
+                top: 0px;
+                bottom: 0px;
+                right: 0px;
+                left: 0px;
+                overflow: hidden;
+                padding: 0;
+                margin: 0;
+                background-color: #F0F0F0;
+                filter: alpha(opacity=80);
+                opacity: 0.8;
+                z-index: 100000;
+            }
+
+            #Progress {
+                position: fixed;
+                top: 40%;
+                left: 40%;
+                height: 20%;
+                width: 20%;
+                z-index: 100001;
+                background-color: #FFFFFF;
+                border: 1px solid Gray;
+                background-image: url('Supported%20Files/ajax-load.gif');
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .UpdateProgress {
+                color: red;
+                -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+                -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+                animation-name: example;
+                animation-duration: 4s;
+            }
+            /* Safari 4.0 - 8.0 */
+            @-webkit-keyframes example {
+                0% {
+                    color: red;
+                }
+
+                10% {
+                    color: blue;
+                }
+
+                20% {
+                    color: blueviolet;
+                }
+
+                30% {
+                    color: brown;
+                }
+
+                40% {
+                    color: crimson;
+                }
+
+                50% {
+                    color: darkblue;
+                }
+
+                60% {
+                    color: darkgreen;
+                }
+
+                70% {
+                    color: darkorchid;
+                }
+
+                80% {
+                    color: darkmagenta;
+                }
+
+                90% {
+                    color: greenyellow;
+                }
+
+                100% {
+                    color: green;
+                }
+            }
+
+            /* Standard syntax */
+            @keyframes example {
+                0% {
+                    color: red;
+                }
+
+                10% {
+                    color: blue;
+                }
+
+                20% {
+                    color: blueviolet;
+                }
+
+                30% {
+                    color: brown;
+                }
+
+                40% {
+                    color: crimson;
+                }
+
+                50% {
+                    color: darkblue;
+                }
+
+                60% {
+                    color: darkgreen;
+                }
+
+                70% {
+                    color: darkorchid;
+                }
+
+                80% {
+                    color: darkmagenta;
+                }
+
+                90% {
+                    color: greenyellow;
+                }
+
+                100% {
+                    color: green;
+                }
+            }
+
+            .modalBackground {
+                background-color: black;
+                filter: alpha(opacity=80);
+                opacity: 0.8;
+            }
+
+            .modalPopup {
+                background-color: #FFFFFF;
+                border-width: 3px;
+                border-color: black;
+                border-style: solid;
+                padding-top: 10px;
+                padding-left: 10px;
+                width: 640px;
+                height: 480px;
+            }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+            <div class="logo"></div>
+            <h1>Quest.com</h1>
+            <h2>Search Your Informative Information</h2>
+        </div>
+        <asp:Menu ID="MenuBar" runat="server" Orientation="Horizontal" DisappearAfter="1">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Profile.aspx" Text="Back To Home" Value="Back To Home"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#C4C963" ForeColor="#707333" />
+            <StaticMenuItemStyle Font-Bold="True" Font-Names="Arial" Font-Size="Large" ForeColor="#C4C963" HorizontalPadding="20px" ItemSpacing="20px" VerticalPadding="20px" />
+            <%--<StaticSelectedStyle BackColor="#55602D" />--%>
+        </asp:Menu>
+        <div id="bottomContent">
+            <div class="contentColumn">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <div class="contentTop"></div>
+                    <div class="contentMain"></div>
+                    <div class="contentBottom"></div>
+                </asp:ContentPlaceHolder>
+                <div id="footer">
+                    <h2>©<a href="https://www.facebook.com/sajeeb.chandan"> Sajeeb Chandan </a>2017</h2><br/ /><br/ />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

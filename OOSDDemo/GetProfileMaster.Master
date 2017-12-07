@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GetProfileMaster.master.cs" Inherits="OOSDDemo.GetProfileMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="fadedtab/fadedtab.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="JS/script.js"></script>
+    <script type="text/javascript" src="JS/caman.full.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+            <div class="logo"></div>
+            <h1>Quest.com</h1>
+            <h2>Search Your Informative Information</h2>
+        </div>
+
+        <div id="bottomContent">
+            <div class="contentColumn">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <div class="contentTop"></div>
+                    <div class="contentMain"></div>
+                    <div class="contentBottom"></div>
+                </asp:ContentPlaceHolder>
+                <div id="footer">
+                    <h2>©<a href="https://www.facebook.com/sajeeb.chandan"> Sajeeb Chandan </a>2017</h2><br/ /><br/ />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

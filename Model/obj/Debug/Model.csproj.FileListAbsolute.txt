@@ -1,0 +1,5 @@
+D:\OOSDDemo\Model\bin\Debug\Model.dll
+D:\OOSDDemo\Model\bin\Debug\Model.pdb
+D:\OOSDDemo\Model\obj\Debug\Model.dll
+D:\OOSDDemo\Model\obj\Debug\Model.pdb
+D:\OOSDDemo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,237 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Blog Details.master.cs" Inherits="OOSDDemo.Blog_Details" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="fadedtab/fadedtab.css" />
+    <title>Faded Tab by Bryant Smith</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //GridView Comment 
+        var prevComment = [];
+        function showComment(n) {
+            //$("#wraptheedit").show();
+            $("#divComment" + n).show();
+            $("#lnkComment" + n).hide();
+            $("#lnkCancel" + n).show();
+            return false;
+        }
+        function closeComment(n) {
+            //$("#wraptheedit").hide();
+            $("#divComment" + n).hide();
+            $("#lnkComment" + n).show();
+            $("#lnkCancel" + n).hide();
+            return false;
+        }
+
+        function showReply(n) {
+            //$("#wraptheedit").show();
+            $("#divReply" + n).show();
+            $("#lnkReply" + n).hide();
+            $("#lnkCancelReply" + n).show();
+            return false;
+        }
+        function closeReply(n) {
+            //$("#wraptheedit").hide();
+            $("#divReply" + n).hide();
+            $("#lnkReply" + n).show();
+            $("#lnkCancelReply" + n).hide();
+            return false;
+        }
+    </script>
+    <script type="text/javascript">
+
+        function showimagepreview(input) {
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+
+                    document.getElementsByTagName("img")[0].setAttribute("src", e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <style type="text/css">
+        .link {
+            text-decoration: none;
+            color: #808080;
+        }
+
+            .link:hover {
+                color: #dddddd;
+            }
+
+        #Background {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            background-color: #F0F0F0;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            z-index: 100000;
+        }
+
+        #Progress {
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            height: 20%;
+            width: 20%;
+            z-index: 100001;
+            background-color: #FFFFFF;
+            border: 1px solid Gray;
+            background-image: url('Supported%20Files/ajax-load.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .UpdateProgress {
+            color: red;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            0% {
+                color: red;
+            }
+
+            10% {
+                color: blue;
+            }
+
+            20% {
+                color: blueviolet;
+            }
+
+            30% {
+                color: brown;
+            }
+
+            40% {
+                color: crimson;
+            }
+
+            50% {
+                color: darkblue;
+            }
+
+            60% {
+                color: darkgreen;
+            }
+
+            70% {
+                color: darkorchid;
+            }
+
+            80% {
+                color: darkmagenta;
+            }
+
+            90% {
+                color: greenyellow;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes example {
+            0% {
+                color: red;
+            }
+
+            10% {
+                color: blue;
+            }
+
+            20% {
+                color: blueviolet;
+            }
+
+            30% {
+                color: brown;
+            }
+
+            40% {
+                color: crimson;
+            }
+
+            50% {
+                color: darkblue;
+            }
+
+            60% {
+                color: darkgreen;
+            }
+
+            70% {
+                color: darkorchid;
+            }
+
+            80% {
+                color: darkmagenta;
+            }
+
+            90% {
+                color: greenyellow;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <div class="logo"></div>
+            <h1>Quest.com</h1>
+            <h2>Search Your Informative Information</h2>
+        </div>
+        <asp:Menu ID="MenuBar" runat="server" Orientation="Horizontal" DisappearAfter="1">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/Discussions.aspx" Text="Discussions" Value="Discussions"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Blogs.aspx" Text="View All Blog" Value="View All Blog"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Write Blog.aspx" Text="Write Blog" Value="Write Blog"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/web5.aspx" Text="Anonymous Inbox" Value="Anonymous Inbox"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Profile.aspx" Text="Profile" Value="Profile"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/null.aspx" Text="Logout" Value="Logout"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Services.aspx" Text="Services" Value="Services"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#C4C963" ForeColor="#707333" />
+            <StaticMenuItemStyle Font-Bold="True" Font-Names="Arial" Font-Size="Large" ForeColor="#C4C963" HorizontalPadding="20px" ItemSpacing="20px" VerticalPadding="20px" />
+            <%--<StaticSelectedStyle BackColor="#55602D" />--%>
+        </asp:Menu>
+
+        <div id="bottomContent">
+            <div class="contentColumn">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <div class="contentTop"></div>
+                    <div class="contentMain"></div>
+                    <div class="contentBottom"></div>
+                </asp:ContentPlaceHolder>
+                <div id="footer">
+                    <h2>©<a href="https://www.facebook.com/sajeeb.chandan"> Sajeeb Chandan </a>2017</h2><br/ /><br/ />
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

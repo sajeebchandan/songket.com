@@ -1,0 +1,196 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Simple.master.cs" Inherits="OOSDDemo.Simple" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="JS/caman.full.js"></script>
+    <script type="text/javascript" src="JS/script.js"></script>
+    <link href="style.css" rel="stylesheet" />
+
+    <link href="W3.css" rel="stylesheet" />
+    <title></title>
+    <style type="text/css">
+        .BigButton {
+            background-color: green;
+            border: 1px solid darkgreen;
+            padding: 7px 25px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bolder;
+            float: left;
+        }
+
+            .BigButton:hover {
+                background-color: white;
+                border: 1px solid darkgreen;
+                padding: 7px 25px;
+                border-radius: 35px;
+                color: darkgreen;
+                cursor: pointer;
+            }
+
+        #Background {
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            background-color: #F0F0F0;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            z-index: 100000;
+        }
+
+        #Progress {
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            height: 20%;
+            width: 20%;
+            z-index: 100001;
+            background-color: #FFFFFF;
+            border: 1px solid Gray;
+            background-image: url('Supported%20Files/ajax-load.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .UpdateProgress {
+            color: red;
+            -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+            animation-name: example;
+            animation-duration: 4s;
+        }
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes example {
+            0% {
+                color: red;
+            }
+
+            10% {
+                color: blue;
+            }
+
+            20% {
+                color: blueviolet;
+            }
+
+            30% {
+                color: brown;
+            }
+
+            40% {
+                color: crimson;
+            }
+
+            50% {
+                color: darkblue;
+            }
+
+            60% {
+                color: darkgreen;
+            }
+
+            70% {
+                color: darkorchid;
+            }
+
+            80% {
+                color: darkmagenta;
+            }
+
+            90% {
+                color: greenyellow;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+
+        /* Standard syntax */
+        @keyframes example {
+            0% {
+                color: red;
+            }
+
+            10% {
+                color: blue;
+            }
+
+            20% {
+                color: blueviolet;
+            }
+
+            30% {
+                color: brown;
+            }
+
+            40% {
+                color: crimson;
+            }
+
+            50% {
+                color: darkblue;
+            }
+
+            60% {
+                color: darkgreen;
+            }
+
+            70% {
+                color: darkorchid;
+            }
+
+            80% {
+                color: darkmagenta;
+            }
+
+            90% {
+                color: greenyellow;
+            }
+
+            100% {
+                color: green;
+            }
+        }
+
+        .modalBackground {
+            background-color: black;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+        }
+
+        .modalPopup {
+            background-color: #FFFFFF;
+            border-width: 3px;
+            border-color: black;
+            border-style: solid;
+            padding-top: 10px;
+            padding-left: 10px;
+            width: 640px;
+            height: 480px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1 style="margin: -4px 0"><a href="Home.aspx" style="margin-top: -5px">Quest.com</a> Service</h1>
+            <asp:LinkButton ID="LinkButtonBack" runat="server" OnClick="LinkButtonBack_Click">Back To Service List</asp:LinkButton>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

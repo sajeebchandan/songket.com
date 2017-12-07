@@ -1,0 +1,11 @@
+D:\OOSDDemo\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
+D:\OOSDDemo\Controller\bin\Debug\Controller.dll
+D:\OOSDDemo\Controller\bin\Debug\Controller.pdb
+D:\OOSDDemo\Controller\bin\Debug\DataAccessLayer.dll
+D:\OOSDDemo\Controller\bin\Debug\Model.dll
+D:\OOSDDemo\Controller\bin\Debug\SampleHash.dll
+D:\OOSDDemo\Controller\bin\Debug\DataAccessLayer.pdb
+D:\OOSDDemo\Controller\bin\Debug\Model.pdb
+D:\OOSDDemo\Controller\bin\Debug\SampleHash.pdb
+D:\OOSDDemo\Controller\obj\Debug\Controller.dll
+D:\OOSDDemo\Controller\obj\Debug\Controller.pdb

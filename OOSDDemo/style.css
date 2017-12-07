@@ -1,0 +1,133 @@
+﻿body {
+    font-family: sans-serif;
+}
+
+.img {
+    border: white;
+    border-style: solid;
+    height: 576px;
+    width: 1024px;
+    float: right;
+}
+
+.tools {
+    width: 300px;
+    float: left;
+}
+
+h1 {
+    margin-left: 585px;
+}
+
+.filter {
+    background-color: green;
+    border: 5px solid white;
+    padding: 7px 25px;
+    border-radius: 5px;
+    color: white;
+    width: 140px;
+    font-weight: bolder;
+    float: left;
+}
+
+    .filter:hover {
+        background-color: white;
+        border: 5px solid darkgreen;
+        padding: 7px 25px;
+        border-radius: 35px;
+        color: darkgreen;
+        cursor: pointer;
+    }
+/* Safari 4.0 - 8.0 */
+/*@-webkit-keyframes example {
+    0% {
+        color:aliceblue;
+    }
+
+    10% {
+        color:antiquewhite;
+    }
+
+    20% {
+        color:azure;
+    }
+
+    30% {
+        color:beige;
+    }
+
+    40% {
+        color:blanchedalmond;
+    }
+
+    50% {
+        color:cornsilk;
+    }
+
+    60% {
+        color:floralwhite;
+    }
+
+    70% {
+        color:gainsboro;
+    }
+
+    80% {
+        color:ghostwhite;
+    }
+
+    90% {
+        color:honeydew;
+    }
+
+    100% {
+        color:ivory;
+    }
+}*/
+
+/* Standard syntax */
+/*@keyframes example {
+    0% {
+        color:aliceblue;
+    }
+
+    10% {
+        color:antiquewhite;
+    }
+
+    20% {
+        color:azure;
+    }
+
+    30% {
+        color:beige;
+    }
+
+    40% {
+        color:blanchedalmond;
+    }
+
+    50% {
+        color:cornsilk;
+    }
+
+    60% {
+        color:floralwhite;
+    }
+
+    70% {
+        color:gainsboro;
+    }
+
+    80% {
+        color:ghostwhite;
+    }
+
+    90% {
+        color:honeydew;
+    }
+
+    100% {
+        color:ivory;
+    }
+}*/
