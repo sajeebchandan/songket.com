@@ -10,7 +10,7 @@ namespace OOSDDemo
     public partial class Scientific_Calculator : System.Web.UI.Page
     {
         double num1 = 0;
-        double num2 = 0;
+        double num4 = 0;
         double num3 = 0;
         double result = 0;
         bool isOpPerformed = false;
@@ -575,22 +575,22 @@ namespace OOSDDemo
                     TextBox1.Text = Convert.ToString(result);
                     break;
                 case "Mod":
-                    num2 = Convert.ToDouble(TextBox1.Text);
-                    TextBoxLabel.Text = TextBoxLabel.Text + num2;
-                    result = num3 % num2;
-                    TextBox1.Text = Convert.ToString(result);
+                    ViewState["num4"] = Convert.ToDouble(TextBox1.Text);
+                    //TextBoxLabel.Text = TextBoxLabel.Text + ViewState["num4"];
+                    ViewState["result"] = Convert.ToDouble(ViewState["num3"].ToString()) % Convert.ToDouble(ViewState["num4"].ToString());
+                    TextBox1.Text = Convert.ToString(ViewState["result"]);
                     break;
 
                 case "Rootn":
-                    num2 = Convert.ToDouble(TextBox1.Text);
-                    result = Math.Pow(num3, 1 / num2);
+                    num4 = Convert.ToDouble(TextBox1.Text);
+                    result = Math.Pow(num3, 1 / num4);
                     TextBox1.Text = Convert.ToString(result);
                     break;
 
                 case "^":
-                    num2 = Convert.ToDouble(TextBox1.Text);
-                    TextBoxLabel.Text = TextBoxLabel.Text + num2;
-                    result = Math.Pow(num3, num2);
+                    num4 = Convert.ToDouble(TextBox1.Text);
+                    TextBoxLabel.Text = TextBoxLabel.Text + num4;
+                    result = Math.Pow(num3, num4);
                     TextBox1.Text = Convert.ToString(result);
                     break;
 
@@ -894,7 +894,7 @@ namespace OOSDDemo
             try
             {
                 TextBoxLabel.Text = TextBox1.Text + " Mod ";
-                num3 = Convert.ToDouble(TextBox1.Text);
+                ViewState["num3"] = Convert.ToDouble(TextBox1.Text);
                 TextBox1.Text = null;
                 ViewState["op"] = "Mod";
             }
