@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog.Master" AutoEventWireup="true" CodeBehind="Blogs.aspx.cs" Inherits="OOSDDemo.Blogs" %>
+﻿<%@ Page Title="Blogs" Language="C#" MasterPageFile="~/Blog.Master" AutoEventWireup="true" CodeBehind="Blogs.aspx.cs" Inherits="OOSDDemo.Blogs" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -8,8 +8,8 @@
 
         .auto-style2 {
             text-align: center;
-            width:640px;
-            overflow:hidden;
+            width: 640px;
+            overflow: hidden;
         }
 
         .auto-style3 {
@@ -26,14 +26,37 @@
         }
 
         .ImageStyle {
-            width:640px;
+            width: 640px;
         }
-        .ImageStyle:hover
-        {
-            transform: scale(1.4);
-            transition: all 1s ease-in-out;
-            filter:brightness(.5);
+
+            .ImageStyle:hover {
+                transform: scale(1.4);
+                transition: all 1s ease-in-out;
+                filter: brightness(.5);
+            }
+
+        .form-control {
+            /*display: block;*/
+            /*padding: 6px 12px;*/
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
         }
+
+            .form-control:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Reset Password.aspx.cs" Inherits="OOSDDemo.Forgotten_Account.Reset_Password" %>
+﻿<%@ Page Title="Reset Password" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Reset Password.aspx.cs" Inherits="OOSDDemo.Forgotten_Account.Reset_Password" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -15,6 +15,29 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        .form-control {
+            /*display: block;*/
+            /*padding: 6px 12px;*/
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+            .form-control:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -54,7 +77,7 @@
                     <tr>
                         <td style="width: 207px"><strong>New Password::</strong></td>
                         <td style="width: 218px">
-                            <asp:TextBox ID="TextBoxNewPassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxNewPassword" runat="server" CssClass="form-control" Width="205px" TextMode="Password"></asp:TextBox>
                         </td>
                         <td><strong><em>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBoxNewPassword" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000"></asp:RequiredFieldValidator>
@@ -67,7 +90,7 @@
                     <tr>
                         <td style="width: 207px; height: 26px"><strong>Confirm New Password::</strong></td>
                         <td style="width: 218px; height: 26px">
-                            <asp:TextBox ID="TextBoxConfirmNewPassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxConfirmNewPassword" runat="server" CssClass="form-control" Width="205px" TextMode="Password"></asp:TextBox>
                         </td>
                         <td style="height: 26px"><strong><em>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxConfirmNewPassword" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000"></asp:RequiredFieldValidator>

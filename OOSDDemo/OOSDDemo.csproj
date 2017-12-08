@@ -75,6 +75,7 @@
     <Content Include="Discussions.aspx" />
     <Content Include="Discussion Details.aspx" />
     <Content Include="Edit Blog.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="ImagePlusPlus.aspx" />
     <Content Include="JS\caman.full.js" />
     <Content Include="JS\script.js" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GetProfileMaster.Master" AutoEventWireup="true" CodeBehind="GetProfile.aspx.cs" Inherits="OOSDDemo.GetProfile" %>
+﻿<%@ Page Title="User Profile" Language="C#" MasterPageFile="~/GetProfileMaster.Master" AutoEventWireup="true" CodeBehind="GetProfile.aspx.cs" Inherits="OOSDDemo.GetProfile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">

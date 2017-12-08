@@ -45,6 +45,7 @@
     <Compile Include="Model_Blog.cs" />
     <Compile Include="Model_BlogComment.cs" />
     <Compile Include="Model_BlogCommentReply.cs" />
+    <Compile Include="Model_Message.cs" />
     <Compile Include="Model_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

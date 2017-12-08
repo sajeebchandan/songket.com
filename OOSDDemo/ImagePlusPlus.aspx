@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Simple.Master" AutoEventWireup="true" CodeBehind="ImagePlusPlus.aspx.cs" Inherits="OOSDDemo.Editro" %>
+﻿<%@ Page Title="Image++" Language="C#" MasterPageFile="~/Simple.Master" AutoEventWireup="true" CodeBehind="ImagePlusPlus.aspx.cs" Inherits="OOSDDemo.Editro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -203,20 +203,20 @@
             <h2>Crop Image</h2>
             <br />
             <div>
-                <input type="text" id="width" placeholder="Enter a Width For Your Image" /><br />
+                <input type="text" id="width" placeholder="Enter a Width For Your Image" class="form-control" /><br />
 
-                <input type="text" id="height" placeholder="Enter a Height For Your Image" /><br />
+                <input type="text" id="height" placeholder="Enter a Height For Your Image" class="form-control" /><br />
 
-                <input type="text" id="x" placeholder="Enter a starting X loc For Your Image" /><br />
+                <input type="text" id="x" placeholder="Enter a starting X loc For Your Image" class="form-control" /><br />
 
-                <input type="text" id="y" placeholder="Enter a starting Y loc For Your Image" /><br />
+                <input type="text" id="y" placeholder="Enter a starting Y loc For Your Image" class="form-control" /><br />
 
                 <input type="button" id="preview" value="Preview" class="filter" />
                 <input type="button" id="crop" value="Crop" class="filter" />
                 <br />
                 <br />
                 <h3>Write Message Over your Photo</h3>
-                <input type="text" id="message" placeholder="Type ypur message">
+                <input type="text" id="message" placeholder="Type ypur message" class="form-control">
                 <input type="button" id="submit" value="Add Message" />
 
             </div>

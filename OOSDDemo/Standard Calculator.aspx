@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Simple.Master" AutoEventWireup="true" CodeBehind="Standard Calculator.aspx.cs" Inherits="OOSDDemo.Standard_Calculator" %>
+﻿<%@ Page Title="Standard Calculator" Language="C#" MasterPageFile="~/Simple.Master" AutoEventWireup="true" CodeBehind="Standard Calculator.aspx.cs" Inherits="OOSDDemo.Standard_Calculator" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -50,7 +50,7 @@
                 <br />
                 <asp:TextBox ID="TextBoxLabel" runat="server" BackColor="BlanchedAlmond" TextMode="MultiLine" Height="55px" Width="321px" BorderStyle="None" CssClass="NoResize" ReadOnly="True"></asp:TextBox>
                 <br />
-                <asp:TextBox ID="TextBox1" runat="server" BorderColor="#3333FF" BorderStyle="Solid" Font-Bold="True" Height="55px" Width="335px" TextMode="MultiLine" ReadOnly="True" BackColor="White" ForeColor="Black" CssClass="NoResize" Font-Size="Large"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" BorderColor="#3333FF" BorderStyle="Solid" Font-Bold="True" Height="55px" Width="335px" TextMode="MultiLine" ReadOnly="True" BackColor="White" ForeColor="Black" CssClass="NoResize , form-control" Font-Size="Large"></asp:TextBox>
                 <br />
                 <asp:Button ID="ButtonMclear" runat="server" Font-Bold="True" Font-Size="Larger" Height="44px" OnClick="ButtonMclear_Click" Text="MC" Width="58px" CssClass="BigButtonBR" />
                 &nbsp;<asp:Button ID="ButtonMresult" runat="server" Font-Bold="True" Font-Size="Larger" Height="44px" OnClick="ButtonMresult_Click" Text="MR" Width="58px" CssClass="BigButtonBR" />

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Discussions.aspx.cs" Inherits="OOSDDemo.Q" %>
+﻿<%@ Page Title="Discussions" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Discussions.aspx.cs" Inherits="OOSDDemo.Q" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -68,7 +68,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
 
-            <asp:TextBox ID="txtQuestion" runat="server" TextMode="MultiLine" Width="1230px" Height="150px" EnableViewState="True"></asp:TextBox>
+            <asp:TextBox ID="txtQuestion" runat="server" TextMode="MultiLine" CssClass="NoResize , form-control" Width="1230px" Height="150px" EnableViewState="True"></asp:TextBox>
             <asp:HtmlEditorExtender ID="txtQuestion_HtmlEditorExtender" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="txtQuestion">
             </asp:HtmlEditorExtender>
             <br />

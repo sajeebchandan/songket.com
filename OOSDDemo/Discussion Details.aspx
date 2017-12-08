@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Discussion Details.aspx.cs" Inherits="OOSDDemo.QD" %>
+﻿<%@ Page Title="Discussion Details" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Discussion Details.aspx.cs" Inherits="OOSDDemo.QD" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -136,7 +136,7 @@
                                                 <tr>
                                                     <td>
                                                         <div id='divAnswer<%# Eval("Q_ID") %>' style="display: block; margin-top: 5px;">
-                                                            <asp:TextBox ID="TextBoxAnswer" runat="server" BorderStyle="None" CssClass="NoResize" Height="150px" MaxLength="900" placeholder="Write Your Comment Here" TextMode="MultiLine" ToolTip="Write Your Comment Here" Width="1206px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBoxAnswer" runat="server" BorderStyle="None" CssClass="NoResize, form-control" Height="150px" MaxLength="900" placeholder="Write Your Comment Here" TextMode="MultiLine" ToolTip="Write Your Comment Here" Width="1206px"></asp:TextBox>
                                                             <asp:HtmlEditorExtender ID="TextBoxAnswer_HtmlEditorExtender" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxAnswer">
                                                             </asp:HtmlEditorExtender>
                                                             <asp:Button ID="ButtonSubmit" runat="server" CssClass="BigButtonQ" OnClick="ButtonSubmit_Click" Text="Answer" />
@@ -187,7 +187,7 @@
                                                                 <a class="link" id='lnkCancelAnswerReply<%# Eval("A_ID") %>' href="javascript:void(0)" onclick="closeAnswerReply(<%# Eval("A_ID") %>); return false;">Cancel</a>
                                                                 <br />
                                                                 <div id='divAnswerReply<%# Eval("A_ID") %>' style="display: block; margin-top: 5px;">
-                                                                    <asp:TextBox ID="TextBoxReply" runat="server" Height="65px" TextMode="MultiLine" Width="1050px" CssClass="NoResize" placeholder="Write Your Reply Here" MaxLength="900" BorderStyle="None" ToolTip="Write Your Reply Here" Font-Names="Calibri"></asp:TextBox>
+                                                                    <asp:TextBox ID="TextBoxReply" runat="server" Height="65px" TextMode="MultiLine" Width="1050px" CssClass="NoResize , form-control" placeholder="Write Your Reply Here" MaxLength="900" BorderStyle="None" ToolTip="Write Your Reply Here" Font-Names="Calibri"></asp:TextBox>
                                                                     <%--<asp:HtmlEditorExtender ID="HtmlEditorExtender1" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxComment"></asp:HtmlEditorExtender>--%>
                                                                     <asp:Button ID="ButtonReply" runat="server" OnClick="ButtonReply_Click" CssClass="BigButtonQR" Text="Reply" />
                                                                     <br />

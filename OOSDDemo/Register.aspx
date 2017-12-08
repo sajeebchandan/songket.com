@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="OOSDDemo.Register" %>
+﻿<%@ Page Title="Registration" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="OOSDDemo.Register" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -73,7 +73,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px"><strong>Name::</strong></td>
                 <td style="width: 110px">
-                    <asp:TextBox ID="TextBoxName" runat="server" Width="205px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxName" runat="server" Width="205px"  CssClass="form-control" ></asp:TextBox>
                 </td>
                 <td style="width: 228px">
                     <strong><em>
@@ -91,7 +91,7 @@
                 <td style="width: 110px">
                     <asp:UpdatePanel ID="UpdatePanelUsernameChecker" runat="server">
                         <ContentTemplate>
-                            <asp:TextBox ID="TextBoxUsername" runat="server" Width="205px" AutoPostBack="True" ValidateRequestMode="Enabled"></asp:TextBox><br />
+                            <asp:TextBox ID="TextBoxUsername" runat="server" Width="205px" AutoPostBack="True" ValidateRequestMode="Enabled"  CssClass="form-control" ></asp:TextBox><br />
                             <asp:Label ID="LabelUsername" runat="server" Text="."></asp:Label>
                         </ContentTemplate>
                         <Triggers>
@@ -113,7 +113,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px"><strong>E-mail::</strong></td>
                 <td style="width: 110px">
-                    <asp:TextBox ID="TextBoxEmail" runat="server" Width="205px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxEmail" runat="server" Width="205px" CssClass="form-control" ></asp:TextBox>
                 </td>
                 <td style="width: 228px"><strong><em>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ControlToValidate="TextBoxEmail" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF3300"></asp:RequiredFieldValidator>
@@ -139,7 +139,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px; height: 26px"><strong>Choose Country::</strong></td>
                 <td style="width: 110px; height: 26px">
-                    <asp:DropDownList ID="DropDownListCountry" runat="server" Width="209px">
+                    <asp:DropDownList ID="DropDownListCountry" runat="server" Width="209px" CssClass="form-control">
                         <asp:ListItem>Choose</asp:ListItem>
                         <asp:ListItem>Bangladesh</asp:ListItem>
                         <asp:ListItem>India</asp:ListItem>
@@ -158,7 +158,7 @@
                 <td class="w3-right-align" style="width: 161px; height: 92px;"><strong>Date Of Birth</strong></td>
                 <td style="width: 110px; height: 92px;">
                     <br />
-                    <asp:TextBox ID="TextBoxDOB" runat="server" Width="205px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxDOB" runat="server" Width="205px" CssClass="form-control" ></asp:TextBox>
                     <asp:CalendarExtender ID="TextBoxDOB_CalendarExtender" runat="server" Enabled="True" TargetControlID="TextBoxDOB" ViewStateMode="Enabled" Format="dd/MM/yyyy">
                     </asp:CalendarExtender>
 
@@ -174,7 +174,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px"><strong>Password::</strong></td>
                 <td style="width: 110px">
-                    <asp:TextBox ID="TextBoxPassword" runat="server" Width="205px" ToolTip="Password Must Contains 2 Uppercase letters, 1 Special Character, 2 Digits, 3 Lowercase Letters" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxPassword" runat="server" Width="205px" ToolTip="Password Must Contains 2 Uppercase letters, 1 Special Character, 2 Digits, 3 Lowercase Letters" TextMode="Password" CssClass="form-control" ></asp:TextBox>
                 </td>
                 <td style="width: 228px">
                     <strong><em>
@@ -190,7 +190,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px"><strong>Confirm Password::</strong></td>
                 <td style="width: 110px">
-                    <asp:TextBox ID="TextBoxConfirmpassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxConfirmpassword" runat="server" Width="205px" TextMode="Password" CssClass="form-control" ></asp:TextBox>
                 </td>
                 <td style="width: 228px"><strong><em>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorConfirmPassword" runat="server" ControlToValidate="TextBoxConfirmpassword" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF3300"></asp:RequiredFieldValidator>
@@ -203,7 +203,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px; height: 26px;"><strong>Profile Picture::</strong></td>
                 <td style="width: 110px; height: 26px;">
-                    <asp:FileUpload ID="FileUpload1" runat="server" Width="205px" onchange="showimagepreview(this)" ValidateRequestMode="Enabled" />
+                    <asp:FileUpload ID="FileUpload1" runat="server" Width="205px" onchange="showimagepreview(this)" ValidateRequestMode="Enabled"  CssClass="form-control"  />
                     <img alt="Preview" height="200" src="" style="background-color: #FF0000" width="200" id="img" />Preview</td>
                 <td style="width: 228px; height: 26px;"><strong><em>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidatorProfilePicture" runat="server" ControlToValidate="FileUpload1" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF3300"></asp:RequiredFieldValidator>
@@ -213,7 +213,7 @@
             <tr>
                 <td class="w3-right-align" style="width: 161px; height: 26px;"><strong>Security Question::</strong></td>
                 <td style="width: 110px; height: 26px;">
-                    <asp:DropDownList ID="DropDownListSecurityQuestion" runat="server">
+                    <asp:DropDownList ID="DropDownListSecurityQuestion" runat="server"  CssClass="form-control" >
                         <asp:ListItem>Choose</asp:ListItem>
                         <asp:ListItem>What is your Pet&#39;s name?</asp:ListItem>
                         <asp:ListItem>Who is your Favourite Player?</asp:ListItem>
@@ -235,7 +235,7 @@
                 <td style="width: 161px">&nbsp;</td>
                 <td style="width: 110px">
                     <span style="text-decoration: underline">Answer::</span><br />
-                    <asp:TextBox ID="TextBoxSecurityQuestion" runat="server" Width="205px"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxSecurityQuestion" runat="server" Width="205px"  CssClass="form-control" ></asp:TextBox>
                 </td>
                 <td style="width: 228px">
                     <strong><em>
@@ -254,7 +254,7 @@
                     <asp:UpdatePanel ID="UpdatePanelCaptcha" runat="server">
                         <ContentTemplate>
                             <asp:Image ID="ImageCaptcha" runat="server" />
-                            <asp:TextBox ID="TextBoxCaptcha" runat="server" Width="205px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxCaptcha" runat="server" Width="205px"  CssClass="form-control" ></asp:TextBox>
                             <br />
                             <asp:Button ID="ButtonCaptcha" runat="server" OnClick="ButtonCaptcha_Click" Text="Try Another Captcha" CssClass="captchabutton" />
                             <br />

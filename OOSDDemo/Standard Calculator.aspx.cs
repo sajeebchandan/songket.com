@@ -9,16 +9,10 @@ namespace OOSDDemo
 {
     public partial class Standard_Calculator : System.Web.UI.Page
     {
-        double num1 = 0;
         double num2 = 0;
         double num3 = 0;
         double result = 0;
-        double item;
-        string op;
         bool isOpPerformed = false;
-        string copy;
-        double? mem = 0;
-        double? mem_store = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

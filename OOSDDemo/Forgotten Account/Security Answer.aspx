@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Security Answer.aspx.cs" Inherits="OOSDDemo.Forgotten_Account.Security_Answer" %>
+﻿<%@ Page Title="Answer your security question" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Security Answer.aspx.cs" Inherits="OOSDDemo.Forgotten_Account.Security_Answer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -15,6 +15,29 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        .form-control {
+            /*display: block;*/
+            /*padding: 6px 12px;*/
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+            .form-control:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -53,7 +76,7 @@
                     <tr>
                         <td style="width: 163px; height: 26px;"><strong>Security Question::</strong></td>
                         <td style="width: 216px; height: 26px">
-                            <asp:DropDownList ID="DropDownListSecurityQuestion" runat="server" Width="209px">
+                            <asp:DropDownList ID="DropDownListSecurityQuestion" runat="server" Width="209px" CssClass="form-control">
                                 <asp:ListItem>Choose</asp:ListItem>
                                 <asp:ListItem>What is your Pet&#39;s name?</asp:ListItem>
                                 <asp:ListItem>Who is your Favourite Player?</asp:ListItem>
@@ -79,7 +102,7 @@
                     <tr>
                         <td style="width: 163px; height: 26px;"></td>
                         <td style="width: 216px; height: 26px">
-                            <asp:TextBox ID="TextBoxSecurityQuestion" runat="server" Width="205px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxSecurityQuestion" runat="server" Width="205px" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td style="height: 26px"><strong><em>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000" ControlToValidate="TextBoxSecurityQuestion"></asp:RequiredFieldValidator>

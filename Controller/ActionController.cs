@@ -45,6 +45,46 @@ namespace Controller
                 return 0;
         }
 
+
+
+
+        public static int SendMessage(Model_Message SendMessage)
+        {
+            string SQL = "INSERT INTO inbox (Username, textmessage, senttime, sender) VALUES (@Username, @textmessage, @Senttime, @Sender)";
+            SqlCommand cmd = new SqlCommand(SQL);
+            cmd.Parameters.AddWithValue("@Username", SendMessage.Username);
+            cmd.Parameters.AddWithValue("@textmessage", SendMessage.Message);
+            cmd.Parameters.AddWithValue("@Senttime", SendMessage.Senttime);
+            
+
+            if (SendMessage.Sender == null || SendMessage.Sender=="")
+            {
+                cmd.Parameters.AddWithValue("@Sender", "Anonymous");
+                if (DataAccess.ExecuteNonQuery(cmd) > 0)
+                {
+                    return 1;
+                }
+                else
+                    return 0;
+
+            }
+
+            else if (SendMessage.Sender != null)
+            
+                cmd.Parameters.AddWithValue("@Sender", SendMessage.Sender);
+                if (DataAccess.ExecuteNonQuery(cmd) > 0)
+                {
+                    return 1;
+                }
+                else
+                    return 0;
+            
+        }
+
+
+
+
+
         public static int SaveBlog(Model_User _UserRegister, Model_Blog _BlogSave)
         {
             string SQL = "INSERT INTO BlogTable (Username, Name, B_Category, B_Title, B_Post, B_Image, B_File, B_FileName, B_Date) VALUES(@username, @name, @bCategory, @bTitle, @bPost, @bImage, @bFile, @bFileName, @bDate)";

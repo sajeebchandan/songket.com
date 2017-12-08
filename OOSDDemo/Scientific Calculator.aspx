@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Simple.Master" AutoEventWireup="true" CodeBehind="Scientific Calculator.aspx.cs" Inherits="OOSDDemo.Scientific_Calculator" %>
+﻿<%@ Page Title="Scientific Calculator" Language="C#" MasterPageFile="~/Simple.Master" AutoEventWireup="true" CodeBehind="Scientific Calculator.aspx.cs" Inherits="OOSDDemo.Scientific_Calculator" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -49,7 +49,7 @@
                 <br />
                 <asp:TextBox ID="TextBoxLabel" runat="server" BackColor="BlanchedAlmond" TextMode="MultiLine" Height="55px" Width="649px" BorderStyle="None" CssClass="NoResize" ReadOnly="True"></asp:TextBox>
                 <br />
-                <asp:TextBox ID="TextBox1" runat="server" BorderColor="#3333FF" BorderStyle="Solid" Font-Bold="True" Height="55px" Width="690px" TextMode="MultiLine" Font-Size="Large" ReadOnly="True" CssClass="NoResize"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" BorderColor="#3333FF" BorderStyle="Solid" Font-Bold="True" Height="55px" Width="690px" TextMode="MultiLine" Font-Size="Large" ReadOnly="True" CssClass="NoResize , form-control"></asp:TextBox>
                 <br />
                 <div style="margin-left: 348px">
                     <asp:RadioButton ID="RadioButtonDegrees" runat="server" Checked="True" Text="Degrees" />

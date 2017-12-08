@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="OOSDDemo.Login" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="OOSDDemo.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -44,7 +44,7 @@
                     <tr>
                         <td class="w3-right-align" style="width: 157px; height: 136px;"><strong>Username::</strong></td>
                         <td style="width: 249px; height: 136px;">
-                            <asp:TextBox ID="TextBoxUsername" runat="server" Width="205px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxUsername" runat="server" Width="205px" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td style="height: 136px"><strong><em>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidatorUsername" runat="server" ControlToValidate="TextBoxUsername" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000"></asp:RequiredFieldValidator>
@@ -61,7 +61,7 @@
                     <tr>
                         <td class="w3-right-align" style="width: 157px"><strong>Password::</strong></td>
                         <td style="width: 249px">
-                            <asp:TextBox ID="TextBoxPassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPassword" runat="server" Width="205px" TextMode="Password" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td><strong><em>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ControlToValidate="TextBoxPassword" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000"></asp:RequiredFieldValidator>

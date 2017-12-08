@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Edit Blog.aspx.cs" Inherits="OOSDDemo.Edit_Blog" %>
+﻿<%@ Page Title="Edit Blog" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Edit Blog.aspx.cs" Inherits="OOSDDemo.Edit_Blog" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -69,6 +69,10 @@
                 border-radius: 35px;
                 color: darkgreen;
                 cursor: pointer;
+            }
+            .NoResize
+            {
+                resize:none;
             }
     </style>
 </asp:Content>
@@ -162,7 +166,7 @@
                 <tr>
                     <td class="auto-style4">
                         <hr />
-                        <asp:TextBox ID="TextBoxPost" runat="server" Height="360px" Text='<%# Eval("B_Post") %>' TextMode="MultiLine" Width="1200px"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxPost" runat="server" Height="360px" Text='<%# Eval("B_Post") %>' TextMode="MultiLine" Width="1200px" CssClass="form-control , NoResize"></asp:TextBox>
                         <asp:HtmlEditorExtender ID="TextBoxPost_HtmlEditorExtender" runat="server" Enabled="True" EnableSanitization="False" TargetControlID="TextBoxPost" DisplaySourceTab="True">
                         </asp:HtmlEditorExtender>
                     </td>

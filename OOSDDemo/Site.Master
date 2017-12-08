@@ -6,7 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="fadedtab/fadedtab.css" />
-    <title>Faded Tab by Bryant Smith</title>
+    <title><%: Page.Title %>-সংকেত ডট কম</title>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
             <script type="text/javascript">
 
                 function showimagepreview(input) {
@@ -22,6 +23,30 @@
                 }
 
         </script>
+    <style type="text/css">
+        .form-control {
+            /*display: block;*/
+            /*padding: 6px 12px;*/
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+            .form-control:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -29,8 +54,8 @@
     <form id="form1" runat="server">
         <div id="header">
             <div class="logo"></div>
-            <h1>Quest.com</h1>
-            <h2>Search Your Informative Information</h2>
+            <h1>সংকেত ডট কম</h1>
+            <h2>Ask, Write, Share, Learn</h2>
         </div>
         <asp:Menu ID="MenuBar" runat="server" Orientation="Horizontal" DisappearAfter="1">
             <Items>

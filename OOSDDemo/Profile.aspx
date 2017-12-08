@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="OOSDDemo.Profile1" %>
+﻿<%@ Page Title="Profile" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="OOSDDemo.Profile1" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -62,7 +62,7 @@
                     <tr>
                         <td class="auto-style2">Name➜</td>
                         <td>
-                            <asp:TextBox ID="TextBoxName" runat="server" Text='<%# Eval("name") %>' Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxName" runat="server" CssClass="form-control" Text='<%# Eval("name") %>' Width="250px"></asp:TextBox>
                         </td>
                         <td><strong>
                             <em>
@@ -79,7 +79,7 @@
                     <tr>
                         <td class="auto-style2">Email➜</td>
                         <td>
-                            <asp:TextBox ID="TextBoxEmail" runat="server" Text='<%# Eval("email") %>' Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxEmail" runat="server" Text='<%# Eval("email") %>'  CssClass="form-control" Width="250px"></asp:TextBox>
                         </td>
                         <td><strong>
                             <em>
@@ -127,7 +127,7 @@
                     <tr>
                         <td class="auto-style2">Date Of Birth➜</td>
                         <td>
-                            <asp:TextBox ID="TextBoxDOB" runat="server" Text='<%# Eval("dob") %>' Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxDOB" runat="server" Text='<%# Eval("dob") %>' Width="250px"  CssClass="form-control" ></asp:TextBox>
                             <asp:CalendarExtender ID="TextBoxDOB_CalendarExtender" runat="server" Enabled="True" TargetControlID="TextBoxDOB">
                             </asp:CalendarExtender>
                         </td>
@@ -163,7 +163,7 @@
                     <tr>
                         <td class="auto-style2">Security Answer➜</td>
                         <td>
-                            <asp:TextBox ID="TextBoxSecurityAnswer" runat="server" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxSecurityAnswer" runat="server" Width="250px" CssClass="form-control" ></asp:TextBox>
                         </td>
                         <td><strong>
                             <em>

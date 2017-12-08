@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Check Username.aspx.cs" Inherits="OOSDDemo.Forgotten_Account.Check_Username" %>
+﻿<%@ Page Title="Check Username" Language="C#" MasterPageFile="~/SiteAuth.Master" AutoEventWireup="true" CodeBehind="Check Username.aspx.cs" Inherits="OOSDDemo.Forgotten_Account.Check_Username" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -15,6 +15,29 @@
             background-repeat: no-repeat;
             background-position: center;
         }
+
+        .form-control {
+            /*display: block;*/
+            /*padding: 6px 12px;*/
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555555;
+            vertical-align: middle;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+        }
+
+            .form-control:focus {
+                border-color: #66afe9;
+                outline: 0;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -55,7 +78,7 @@
                     <tr>
                         <td class="w3-right-align" style="width: 127px"><strong>Username::</strong></td>
                         <td style="width: 226px">
-                            <asp:TextBox ID="TextBoxCheckUsername" runat="server" Width="205px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxCheckUsername" runat="server" Width="205px" CssClass="form-control"></asp:TextBox>
                         </td>
                         <td><strong><em>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBoxCheckUsername" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000"></asp:RequiredFieldValidator>
@@ -93,6 +116,7 @@
         </ContentTemplate>
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="ButtonCheck" EventName="Click" />
+            <asp:AsyncPostBackTrigger ControlID="ButtonNext" EventName="Click"></asp:AsyncPostBackTrigger>
         </Triggers>
         <Triggers>
             <asp:AsyncPostBackTrigger ControlID="ButtonNext" EventName="Click" />

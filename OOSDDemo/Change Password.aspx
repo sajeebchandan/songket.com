@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Change Password.aspx.cs" Inherits="OOSDDemo.Change_Password" %>
+﻿<%@ Page Title="Change Password" Language="C#" MasterPageFile="~/Profile.Master" AutoEventWireup="true" CodeBehind="Change Password.aspx.cs" Inherits="OOSDDemo.Change_Password" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -17,7 +17,7 @@
             <tr>
                 <td style="width: 197px; height: 114px;" class="auto-style1"><strong>Current Password→ <mark class="unicode" data-char-info="U+2191: UPWARDS ARROW" style="color: black;"></mark></strong></td>
                 <td style="width: 224px; height: 114px;">
-                    <asp:TextBox ID="TextBoxCurrentPassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxCurrentPassword" runat="server" Width="205px" CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </td>
                 <td style="height: 114px"><strong><em>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000" ControlToValidate="TextBoxCurrentPassword"></asp:RequiredFieldValidator>
@@ -30,7 +30,7 @@
             <tr>
                 <td style="width: 197px" class="auto-style1"><strong>New Password→</strong></td>
                 <td style="width: 224px">
-                    <asp:TextBox ID="TextBoxNewPassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxNewPassword" runat="server" Width="205px" CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </td>
                 <td><strong><em>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000" ControlToValidate="TextBoxNewPassword"></asp:RequiredFieldValidator>
@@ -43,7 +43,7 @@
             <tr>
                 <td style="width: 197px" class="auto-style1"><strong>Confirm New Password→</strong></td>
                 <td style="width: 224px">
-                    <asp:TextBox ID="TextBoxConfirmNewPassword" runat="server" Width="205px" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="TextBoxConfirmNewPassword" runat="server" Width="205px" CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </td>
                 <td><strong><em>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ErrorMessage="*Required" Style="color: #FF0000" ControlToValidate="TextBoxConfirmNewPassword"></asp:RequiredFieldValidator>

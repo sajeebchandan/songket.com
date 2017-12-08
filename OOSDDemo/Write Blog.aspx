@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BlogWrite.Master" AutoEventWireup="true" CodeBehind="Write Blog.aspx.cs" Inherits="OOSDDemo.Write_Blog1" %>
+﻿<%@ Page Title="Write Blog" Language="C#" MasterPageFile="~/BlogWrite.Master" AutoEventWireup="true" CodeBehind="Write Blog.aspx.cs" Inherits="OOSDDemo.Write_Blog1" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
@@ -19,6 +19,10 @@
         .auto-style4 {
             color: #FF0000;
         }
+        .NoResize
+        {
+            resize:none;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -34,7 +38,7 @@
                 <tr>
                     <td class="auto-style2">Title::</td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="TextBoxTitle" runat="server" Width="1085px" AutoPostBack="True"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxTitle" runat="server" Width="1085px" AutoPostBack="True"  CssClass="form-control" ></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBoxTitle" ErrorMessage="*Required" CssClass="auto-style4"></asp:RequiredFieldValidator>
@@ -43,7 +47,7 @@
                 <tr>
                     <td class="auto-style2">Category::</td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="TextBoxCategory" runat="server" Width="1085px"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxCategory" runat="server" Width="1085px"  CssClass="form-control" ></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxCategory" ErrorMessage="*Required" CssClass="auto-style4"></asp:RequiredFieldValidator>
@@ -59,7 +63,7 @@
                 <tr>
                     <td class="auto-style2">Post::</td>
                     <td class="auto-style3">
-                        <asp:TextBox ID="TextBoxPost" runat="server" Height="360px" TextMode="MultiLine" Width="1085px"></asp:TextBox>
+                        <asp:TextBox ID="TextBoxPost" runat="server" Height="360px" TextMode="MultiLine" Width="1085px" CssClass="form-control , NoResize"></asp:TextBox>
                         <asp:HtmlEditorExtender ID="TextBoxPost_HtmlEditorExtender" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxPost">
                         </asp:HtmlEditorExtender>
                     </td>

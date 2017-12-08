@@ -10,13 +10,14 @@ p {
 
 
 
+
 .BigButton {
     background-color: green;
     border: 1px solid darkgreen;
     padding: 7px 25px;
     border-radius: 5px;
     color: white;
-    font-weight:bolder;
+    font-weight: bolder;
     float: left;
 }
 

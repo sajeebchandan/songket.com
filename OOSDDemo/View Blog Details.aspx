@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Blog Details.Master" AutoEventWireup="true" CodeBehind="View Blog Details.aspx.cs" Inherits="OOSDDemo.View_Blog_Details1" %>
+﻿<%@ Page Title="Blog Details" Language="C#" MasterPageFile="~/Blog Details.Master" AutoEventWireup="true" CodeBehind="View Blog Details.aspx.cs" Inherits="OOSDDemo.View_Blog_Details1" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -185,7 +185,7 @@
                                                 <tr>
                                                     <td>
                                                         <div id='divComment<%# Eval("B_ID") %>' style="display: block; margin-top: 5px;">
-                                                            <asp:TextBox ID="TextBoxComment" runat="server" BorderStyle="None" CssClass="NoResize" Height="150px" MaxLength="900" placeholder="Write Your Comment Here" TextMode="MultiLine" ToolTip="Write Your Comment Here" Width="1206px"></asp:TextBox>
+                                                            <asp:TextBox ID="TextBoxComment" runat="server" BorderStyle="None" CssClass="NoResize , form-control" Height="150px" MaxLength="900" placeholder="Write Your Comment Here" TextMode="MultiLine" ToolTip="Write Your Comment Here" Width="1206px"></asp:TextBox>
                                                             <asp:HtmlEditorExtender ID="HtmlEditorExtender1" runat="server" Enabled="True" EnableSanitization="false" TargetControlID="TextBoxComment">
                                                             </asp:HtmlEditorExtender>
                                                             <asp:Button ID="ButtonSubmit" runat="server" CssClass="auto-style3" OnClick="ButtonSubmit_Click" Text="Comment" />
@@ -237,7 +237,7 @@
                                                                 <a class="link" id='lnkCancelBlogReply<%# Eval("C_ID") %>' href="javascript:void(0)" onclick="closeBlogReply(<%# Eval("C_ID") %>); return false;">Cancel</a>
                                                                 <br />
                                                                 <div id='divBlogReply<%# Eval("C_ID") %>' style="display: block; margin-top: 5px;">
-                                                                    <asp:TextBox ID="TextBoxReply" runat="server" Height="65px" TextMode="MultiLine" Width="1050px" CssClass="NoResize" placeholder="Write Your Reply Here" MaxLength="900" BorderStyle="None" ToolTip="Write Your Reply Here" Font-Names="Calibri"></asp:TextBox>
+                                                                    <asp:TextBox ID="TextBoxReply" runat="server" Height="65px" TextMode="MultiLine" Width="1050px" CssClass="NoResize , form-control" placeholder="Write Your Reply Here" MaxLength="900" BorderStyle="None" ToolTip="Write Your Reply Here" Font-Names="Calibri"></asp:TextBox>
                                                                     <%--<asp:HtmlEditorExtender ID="HtmlEditorExtender1" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxComment"></asp:HtmlEditorExtender>--%>
                                                                     <asp:Button ID="ButtonReply" runat="server" OnClick="ButtonReply_Click" CssClass="BigButtonBR" Text="Reply" />
                                                                     <br />

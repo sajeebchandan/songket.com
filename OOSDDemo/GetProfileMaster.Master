@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="JS/script.js"></script>
     <script type="text/javascript" src="JS/caman.full.js"></script>
-    <title></title>
+    <title><%: Page.Title %>-সংকেত ডট কম</title>
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -17,8 +18,8 @@
     <form id="form1" runat="server">
     <div id="header">
             <div class="logo"></div>
-            <h1>Quest.com</h1>
-            <h2>Search Your Informative Information</h2>
+            <h1>সংকেত ডট কম</h1>
+            <h2>Ask, Write, Share, Learn</h2>
         </div>
 
         <div id="bottomContent">
