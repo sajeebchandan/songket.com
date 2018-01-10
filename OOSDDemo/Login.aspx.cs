@@ -37,7 +37,7 @@ namespace OOSDDemo
             {
                     System.Threading.Thread.Sleep(2000);
                     Session["New"] = TextBoxUsername.Text;
-                    Response.Redirect("Profil.aspx");
+                    Response.Redirect("Profile.aspx");
             }
             else
             {
