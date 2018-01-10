@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Anonymous Inbox.aspx" />
+    <Content Include="Application Error.aspx" />
     <Content Include="Change Password.aspx" />
     <Content Include="Discussions.aspx" />
     <Content Include="Discussion Details.aspx" />
@@ -114,6 +115,7 @@
     <Content Include="Question.Master" />
     <Content Include="Simple.Master" />
     <Content Include="Service.Master" />
+    <Content Include="Error.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -190,6 +192,13 @@
     <Compile Include="Anonymous Message\Enter Recipient.aspx.designer.cs">
       <DependentUpon>Enter Recipient.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Application Error.aspx.cs">
+      <DependentUpon>Application Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Application Error.aspx.designer.cs">
+      <DependentUpon>Application Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Blog Details.Master.cs">
       <DependentUpon>Blog Details.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,6 +248,13 @@
     </Compile>
     <Compile Include="Edit Blog.aspx.designer.cs">
       <DependentUpon>Edit Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.Master.cs">
+      <DependentUpon>Error.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.Master.designer.cs">
+      <DependentUpon>Error.Master</DependentUpon>
     </Compile>
     <Compile Include="ImagePlusPlus.aspx.cs">
       <DependentUpon>ImagePlusPlus.aspx</DependentUpon>
@@ -299,6 +315,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logger.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
