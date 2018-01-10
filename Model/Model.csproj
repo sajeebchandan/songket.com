@@ -41,11 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract_Person.cs" />
+    <Compile Include="Model_AnonymousMessage.cs" />
+    <Compile Include="Model_AnswerReply.cs" />
     <Compile Include="Model_Admin.cs" />
+    <Compile Include="Model_Answer.cs" />
     <Compile Include="Model_Blog.cs" />
     <Compile Include="Model_BlogComment.cs" />
     <Compile Include="Model_BlogCommentReply.cs" />
+    <Compile Include="Model_Exception.cs" />
+    <Compile Include="Model_Log.cs" />
     <Compile Include="Model_Message.cs" />
+    <Compile Include="Model_Question.cs" />
     <Compile Include="Model_User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

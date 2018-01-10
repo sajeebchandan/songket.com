@@ -64,7 +64,7 @@
                     <td class="auto-style2">Post::</td>
                     <td class="auto-style3">
                         <asp:TextBox ID="TextBoxPost" runat="server" Height="360px" TextMode="MultiLine" Width="1085px" CssClass="form-control , NoResize"></asp:TextBox>
-                        <asp:HtmlEditorExtender ID="TextBoxPost_HtmlEditorExtender" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxPost">
+                        <asp:HtmlEditorExtender ID="TextBoxPost_HtmlEditorExtender" runat="server" EnableSanitization="false" DisplaySourceTab="true" Enabled="True" TargetControlID="TextBoxPost">
                         </asp:HtmlEditorExtender>
                     </td>
                     <td>

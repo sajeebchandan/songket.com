@@ -1,5 +1,24 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GetProfileMaster.master.cs" Inherits="OOSDDemo.GetProfileMaster" %>
 
+
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Diagnostics" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Web" %>
+<%@ Import Namespace="System.Web.UI" %>
+<%@ Import Namespace="Controller" %>
+<%@ Import Namespace="DataAccessLayer" %>
+<%@ Import Namespace="System.IO" %>
+
+
+<%
+    string _username = Server.UrlDecode(Request.QueryString["username"]);
+    Page.Title = ActionController.GetName(_username);
+%>
+
+
+
+
 <!DOCTYPE html>
 
 <html>

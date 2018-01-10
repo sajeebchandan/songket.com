@@ -27,6 +27,14 @@
             object-fit: cover;
             border-radius: 100px;
         }
+        .ForLabel {
+            background-color: #fbfbfb;
+            border-radius: 18px;
+            display: block;
+            /*line-height: 16px;*/
+            padding: 9px 12px;
+            word-break: break-word;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

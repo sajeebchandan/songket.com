@@ -22,7 +22,8 @@
             color: white;
             float: right;
             margin-top: 10px;
-            font-weight:bolder;
+            font-weight: bolder;
+            margin-right: 8px;
         }
 
             .BigButtonQ:hover {
@@ -34,6 +35,16 @@
                 cursor: pointer;
             }
 
+        .ForLabel {
+            background-color: #fbfbfb;
+            border-radius: 18px;
+            display: block;
+            /*line-height: 16px;*/
+            padding: 9px 12px;
+            word-break: break-word;
+        }
+
+
         .BigButtonQR {
             background-color: green;
             border: 1px solid darkgreen;
@@ -43,7 +54,7 @@
             float: right;
             margin-top: 5px;
             margin-right: 34px;
-            font-weight:bolder;
+            font-weight: bolder;
         }
 
             .BigButtonQR:hover {
@@ -119,13 +130,13 @@
                                                 <tr>
                                                     <td>
                                                         <asp:Label ID="LabelAnswer" runat="server" Text="Total Answer"></asp:Label>
-                                                        &nbsp;<asp:Label ID="LabelAnswerCount" runat="server" Text='<%# Eval("Total Answer") %>'></asp:Label>
+                                                        &nbsp;<asp:Label ID="LabelAnswerCount" runat="server" Text='<%# Eval("Total Answer") %>' Font-Bold="true"></asp:Label>
                                                     </td>
                                                 </tr>
 
 
                                                 <tr>
-                                                    <td class="auto-style4" style="/*border: solid; border-color: lightgreen; border-width: 1px*/ background-color:#fbfbfb">
+                                                    <td class="auto-style4 , ForLabel">
                                                         <asp:Label ID="lblQuestion" runat="server" Text='<%# Eval("question") %>'></asp:Label>
                                                     </td>
                                                 </tr>
@@ -137,7 +148,7 @@
                                                     <td>
                                                         <div id='divAnswer<%# Eval("Q_ID") %>' style="display: block; margin-top: 5px;">
                                                             <asp:TextBox ID="TextBoxAnswer" runat="server" BorderStyle="None" CssClass="NoResize, form-control" Height="150px" MaxLength="900" placeholder="Write Your Comment Here" TextMode="MultiLine" ToolTip="Write Your Comment Here" Width="1206px"></asp:TextBox>
-                                                            <asp:HtmlEditorExtender ID="TextBoxAnswer_HtmlEditorExtender" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxAnswer">
+                                                            <asp:HtmlEditorExtender ID="TextBoxAnswer_HtmlEditorExtender" runat="server" EnableSanitization="false" Enabled="True" TargetControlID="TextBoxAnswer" DisplaySourceTab="true">
                                                             </asp:HtmlEditorExtender>
                                                             <asp:Button ID="ButtonSubmit" runat="server" CssClass="BigButtonQ" OnClick="ButtonSubmit_Click" Text="Answer" />
                                                         </div>
@@ -158,11 +169,11 @@
 
 
 
-                                <asp:GridView ID="GridViewChild" runat="server" AutoGenerateColumns="False" Width="1206px" BackColor="#fbfbff" EmptyDataText="No Replies." GridLines="None">
+                                <asp:GridView ID="GridViewChild" runat="server" AutoGenerateColumns="False" Width="1206px" EmptyDataText="No Replies." GridLines="None">
                                     <Columns>
                                         <asp:TemplateField>
                                             <ItemTemplate>
-                                                <div style="width: 100%;">
+                                                <div style="width: 100%; background-color: #fbfbfb; border-radius: 18px; display: block; padding: 9px 5px; margin-bottom: 5px">
                                                     <table style="margin: 3px 5px; width: 100%;">
                                                         <tr>
                                                             <td style="width: 55px; vertical-align: text-top;">
@@ -202,11 +213,11 @@
                                                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                                                     <ContentTemplate>
 
-                                                                        <asp:GridView ID="GridViewReply" runat="server" GridLines="None" AutoGenerateColumns="False" Width="78%" BackColor="#FBFBFF" EmptyDataText="No Reply. Be first to reply this comment" DataSourceID="SqlDataSourceReply">
+                                                                        <asp:GridView ID="GridViewReply" runat="server" GridLines="None" AutoGenerateColumns="False" Width="78%" EmptyDataText="No Reply. Be first to reply this comment" DataSourceID="SqlDataSourceReply">
                                                                             <Columns>
                                                                                 <asp:TemplateField>
                                                                                     <ItemTemplate>
-                                                                                        <div style="width: 100%;">
+                                                                                        <div style="width: 100%; background-color: #e9ebee; border-radius: 18px; display: block; padding: 9px 5px; margin-bottom: 3px;">
                                                                                             <table style="margin: 3px 5px; width: 100%;">
                                                                                                 <tr>
                                                                                                     <td style="width: 55px; vertical-align: text-top;">

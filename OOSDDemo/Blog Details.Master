@@ -1,5 +1,24 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Blog Details.master.cs" Inherits="OOSDDemo.Blog_Details" %>
 
+
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Diagnostics" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Web" %>
+<%@ Import Namespace="System.Web.UI" %>
+<%@ Import Namespace="Controller" %>
+<%@ Import Namespace="DataAccessLayer" %>
+<%@ Import Namespace="System.IO" %>
+
+
+<%
+    string _title = Request.QueryString["Title"].ToString();
+    Page.Title=(Server.UrlDecode(_title)).ToString();
+%>
+
+
+
+
 <!DOCTYPE html>
 
 <html>

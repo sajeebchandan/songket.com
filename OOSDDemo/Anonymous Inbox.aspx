@@ -10,7 +10,14 @@
             height: 20px;
         }
 
-        
+        .tableRow {
+            background-color: #e9ebee;
+            border-radius: 18px;
+            display: block;
+            /*line-height: 16px;*/
+            padding: 9px 12px;
+            word-break: break-word;
+        }
 
         /*.form-control {
             display: block;
@@ -41,22 +48,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:DataList ID="DataList1" runat="server" Width="1210px">
         <ItemTemplate>
-            <table class="auto-style1" style="border-style: solid; border-color: #F3F3F3; border-width: thin thin 5px thin">
+            <table class="auto-style1 , tableRow">
                 <tr>
                     <td>
                         <asp:Label ID="LabelSender" runat="server" Text='<%# Eval("sender") %>'></asp:Label>
-                        <hr style="border-style: solid; border-color: #F3F3F3; border-width: thin" />
+                        <%--<hr style="border-style: solid; border-color: #F3F3F3; border-width: thin" />--%>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
                         <asp:Label ID="LabelDate" runat="server" ForeColor="#7E7E76" Text='<%# Eval("senttime") %>'></asp:Label>
-                        <hr style="border-style: solid; border-color: #F3F3F3; border-width: thin" />
+                        <%--<hr style="border-style: solid; border-color: #F3F3F3; border-width: thin" />--%>
                     </td>
                 </tr>
-                <tr>
+                <%--<tr>
                     <td>&nbsp;</td>
-                </tr>
+                </tr>--%>
                 <tr>
                     <td>
                         <asp:Label ID="LabelMessage" runat="server" Text='<%# Eval("textmessage") %>'></asp:Label>

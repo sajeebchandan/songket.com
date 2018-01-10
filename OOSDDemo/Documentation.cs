@@ -64,6 +64,20 @@ CREATE TABLE [dbo].[AnswerTable] (
 );
 
 
+        CREATE TABLE [dbo].[AnswerTableReply] (
+    [R_ID]     INT            IDENTITY (1, 1) NOT NULL,
+    [Username] VARCHAR (50)   NULL,
+    [Name]     NVARCHAR (50)  NULL,
+    [reply]    NVARCHAR (MAX) NULL,
+    [r_date]   NVARCHAR (50)  NULL,
+    [A_Id]     INT            NULL,
+    PRIMARY KEY CLUSTERED ([R_ID] ASC),
+    FOREIGN KEY ([A_Id]) REFERENCES [dbo].[AnswerTable] ([A_ID]),
+    FOREIGN KEY ([Username]) REFERENCES [dbo].[Users] ([username]),
+    FOREIGN KEY ([Name]) REFERENCES [dbo].[Users] ([name]) ON UPDATE CASCADE
+);
+
+
         CREATE TABLE [dbo].[BlogTable] (
     [B_ID]       INT             IDENTITY (1, 1) NOT NULL,
     [Username]   VARCHAR (50)    NULL,
@@ -105,6 +119,19 @@ CREATE TABLE [dbo].[BlogCommentReply] (
     FOREIGN KEY ([Username]) REFERENCES [dbo].[Users] ([username]) ON UPDATE CASCADE,
     FOREIGN KEY ([Name]) REFERENCES [dbo].[Users] ([name]) ON UPDATE CASCADE
 );
+
+CREATE TABLE [dbo].[inbox] (
+    [ID]          INT            IDENTITY (1, 1) NOT NULL,
+    [Username]    VARCHAR (50)   NOT NULL,
+    [textmessage] NVARCHAR (MAX) NOT NULL,
+    [senttime]    NVARCHAR (500) NOT NULL,
+    [sender]      NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_inbox] PRIMARY KEY CLUSTERED ([ID] ASC),
+    FOREIGN KEY ([Username]) REFERENCES [dbo].[Users] ([username])
+);
+
+
+
 
 
 

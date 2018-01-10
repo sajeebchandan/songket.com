@@ -57,13 +57,22 @@
                 -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
                 box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
             }
+
+        .ForLabel {
+            background-color: #fbfbfb;
+            border-radius: 18px;
+            /*line-height: 16px;*/
+            padding: 9px 12px;
+            margin-bottom:5px;
+            word-break: break-word;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="auto-style4">
         <asp:DataList ID="DataList1" runat="server" Width="1252px" OnItemCommand="DataList1_ItemCommand">
             <ItemTemplate>
-                <table class="auto-style1">
+                <table class="auto-style1 , ForLabel">
                     <tr>
                         <td class="auto-style5">
                             <asp:LinkButton ID="LinkButtonTitle" runat="server" Font-Bold="True" Font-Names="Consolas" Font-Size="X-Large" Font-Underline="True" Text='<%# Eval("B_Title") %>' CommandName="view"></asp:LinkButton>
@@ -81,7 +90,7 @@
                     </tr>
                     <tr>
                         <td>Total Comment
-                            <asp:Label ID="Label1" runat="server" Font-Underline="False" Text='<%# Eval("Total Comment") %>'></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Font-Underline="False" Text='<%# Eval("Total Comment") %>' Font-Bold="true"></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -93,11 +102,6 @@
                         <td class="auto-style2">
                             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# "GetBlogImage.aspx?B_Title=" + HttpUtility.UrlEncode( Eval("B_Title").ToString()) %>' Width="640px" CommandName="viewbyimage" CssClass="ImageStyle" />
                         </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style3">
-                            <hr />
-                            &nbsp;</td>
                     </tr>
                 </table>
             </ItemTemplate>

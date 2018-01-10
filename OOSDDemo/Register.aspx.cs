@@ -32,7 +32,7 @@ namespace OOSDDemo
                         LabelUsername.Visible = true;
                         LabelUsername.Text = "username Available";
                         LabelUsername.ForeColor = Color.Green;
-                        TextBoxEmail.Focus();
+                        //TextBoxEmail.Focus();
                     }
                
             }

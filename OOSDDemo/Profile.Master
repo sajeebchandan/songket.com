@@ -1,5 +1,26 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Profile.master.cs" Inherits="OOSDDemo.Profile" %>
 
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.Diagnostics" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.Web" %>
+<%@ Import Namespace="System.Web.UI" %>
+<%@ Import Namespace="Controller" %>
+<%@ Import Namespace="DataAccessLayer" %>
+<%@ Import Namespace="System.IO" %>
+
+
+<%
+    if (Session["New"] != null)
+    {
+        Page.Title = ActionController.GetName(Session["New"].ToString());
+    }
+%>
+
+
+
+
+
 <!DOCTYPE html>
 
 <html>

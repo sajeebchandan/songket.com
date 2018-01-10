@@ -88,6 +88,14 @@
             object-fit: cover;
             border-radius: 100px;
         }
+        .ForLabel {
+            background-color: #fbfbfb;
+            border-radius: 18px;
+            /*display: block;*/
+            /*line-height: 16px;*/
+            padding: 9px 12px;
+            word-break: break-word;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -174,7 +182,7 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="auto-style4" style="/*border: solid; border-color: lightgreen; border-width: 1px*/ background-color:#fbfbfb">
+                                                    <td class="auto-style4 , ForLabel">
                                                         <asp:Label ID="lblBlog" runat="server" Text='<%# Eval("B_Post") %>'></asp:Label>
                                                     </td>
                                                 </tr>
@@ -186,7 +194,7 @@
                                                     <td>
                                                         <div id='divComment<%# Eval("B_ID") %>' style="display: block; margin-top: 5px;">
                                                             <asp:TextBox ID="TextBoxComment" runat="server" BorderStyle="None" CssClass="NoResize , form-control" Height="150px" MaxLength="900" placeholder="Write Your Comment Here" TextMode="MultiLine" ToolTip="Write Your Comment Here" Width="1206px"></asp:TextBox>
-                                                            <asp:HtmlEditorExtender ID="HtmlEditorExtender1" runat="server" Enabled="True" EnableSanitization="false" TargetControlID="TextBoxComment">
+                                                            <asp:HtmlEditorExtender ID="HtmlEditorExtender1" runat="server" Enabled="True" EnableSanitization="false" TargetControlID="TextBoxComment" DisplaySourceTab="true">
                                                             </asp:HtmlEditorExtender>
                                                             <asp:Button ID="ButtonSubmit" runat="server" CssClass="auto-style3" OnClick="ButtonSubmit_Click" Text="Comment" />
                                                         </div>
@@ -207,11 +215,11 @@
 
 
 
-                                <asp:GridView ID="GridViewChild" runat="server" AutoGenerateColumns="False" Width="1206px" BackColor="#fbfbff" EmptyDataText="No Comments." GridLines="None">
+                                <asp:GridView ID="GridViewChild" runat="server" AutoGenerateColumns="False" Width="1206px" EmptyDataText="No Comments." GridLines="None">
                                     <Columns>
                                         <asp:TemplateField>
                                             <ItemTemplate>
-                                                <div style="width: 100%;">
+                                                <div style="width: 100%; background-color: #fbfbfb; border-radius: 18px; display: block; padding: 9px 5px; margin-bottom: 5px">
                                                     <table style="margin: 3px 5px; width: 100%;">
                                                         <tr>
                                                             <td style="width: 55px; vertical-align: text-top;">
@@ -253,11 +261,11 @@
                                                                 <asp:UpdatePanel ID="UpdatePanel2" runat="server">
                                                                     <ContentTemplate>
 
-                                                                        <asp:GridView ID="GridViewReply" runat="server" GridLines="None" AutoGenerateColumns="False" Width="75%" BackColor="#FBFBFF" EmptyDataText="No Reply. Be first to reply this comment" DataSourceID="SqlDataSourceReply">
+                                                                        <asp:GridView ID="GridViewReply" runat="server" GridLines="None" AutoGenerateColumns="False" Width="75%" EmptyDataText="No Reply. Be first to reply this comment" DataSourceID="SqlDataSourceReply">
                                                                             <Columns>
                                                                                 <asp:TemplateField>
                                                                                     <ItemTemplate>
-                                                                                        <div style="width: 100%;">
+                                                                                        <div style="width: 100%; background-color: #e9ebee; border-radius: 18px; display: block; padding: 9px 5px; margin-bottom: 3px;">
                                                                                             <table style="margin: 3px 5px; width: 100%;">
                                                                                                 <tr>
                                                                                                     <td style="width: 55px; vertical-align: text-top;">

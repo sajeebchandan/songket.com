@@ -8,6 +8,12 @@
         .auto-style2 {
             height: 20px;
         }
+        .ImageStyle {
+            object-fit: cover;
+            border-radius: 200px;
+            height:250px;
+            width:250px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -22,7 +28,7 @@
                 <table class="auto-style1">
                     <tr>
                         <td class="auto-style3">
-                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("username") %>' Width="250px" />
+                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("username") %>' CssClass="ImageStyle" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
