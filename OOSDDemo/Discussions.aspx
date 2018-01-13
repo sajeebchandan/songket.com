@@ -92,7 +92,7 @@
                         <table class="auto-style5">
                             <tr>
                                 <td class="auto-style4">
-                                    <asp:Image ID="Image1" runat="server" Height="100px" Width="100px" ImageUrl='<%# "GetImage.aspx?username=" + Eval("username") %>' CssClass="ImageStyle" />
+                                    <asp:Image ID="Image1" runat="server" Height="100px" Width="100px" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' CssClass="ImageStyle" />
                                 </td>
                                 <td>
                                     <asp:HyperLink ID="HyperLinkAskedBy" runat="server" Font-Bold="True" ForeColor="#51990F" NavigateUrl='<%# "GetProfile.aspx?username=" + Eval("username") %>' Text='<%# Eval("Name") %>'></asp:HyperLink>

@@ -92,7 +92,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Image ID="Image2" runat="server" CssClass="ImageStyle" Height="150px" ImageUrl='<%# "GetImage.aspx?username=" + Eval("Username") %>' Width="150px" />
+                        <asp:Image ID="Image2" runat="server" CssClass="ImageStyle" Height="150px" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' Width="150px" />
                     </td>
                 </tr>
                 <tr>
@@ -114,7 +114,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style3">
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# "GetBlogImage.aspx?B_Title=" + HttpUtility.UrlEncode( Eval("B_Title").ToString()) %>' Width="640px" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetBlogImageString64(HttpUtility.UrlEncode( Eval("B_Title").ToString())) %>' Width="640px" />
                     </td>
                 </tr>
                 <tr>

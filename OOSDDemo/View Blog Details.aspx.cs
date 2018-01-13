@@ -160,5 +160,62 @@ namespace OOSDDemo
         //        }
         //    }
         //}
+
+        public string GetImageStringBase64(string _username)
+        {
+            //string _username = Server.UrlDecode(Request.QueryString["username"]);
+
+            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string sqlCommand = "SELECT photo FROM Users WHERE username = @username";
+
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand com = new SqlCommand(sqlCommand, con);
+
+            com.Parameters.AddWithValue("@username", _username);
+
+            con.Open();
+            SqlDataReader r = com.ExecuteReader();
+
+            if (r.Read())
+            {
+                byte[] imgData = (byte[])r["photo"];
+                string strBase64 = Convert.ToBase64String(imgData);
+                //Image1.ImageUrl = "data:Image/jpg;base64," + strBase64;
+                //Response.BinaryWrite(imgData);
+                return strBase64;
+            }
+            else
+            {
+                con.Close();
+                return "";
+            }
+        }
+
+        public string GetBlogImageString64(string _BlogTitle)
+        {
+
+            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string sqlCommand = "SELECT B_Image FROM BlogTable WHERE B_Title = @B_Title";
+
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand com = new SqlCommand(sqlCommand, con);
+
+            com.Parameters.AddWithValue("@B_Title", Server.UrlDecode(_BlogTitle));
+
+            con.Open();
+            SqlDataReader r = com.ExecuteReader();
+
+            if (r.Read())
+            {
+                byte[] imgData = (byte[])r["B_Image"];
+                string strBase64 = Convert.ToBase64String(imgData);
+                return strBase64;
+            }
+            else
+            {
+                con.Close();
+                return "";
+            }
+        }
     }
 }

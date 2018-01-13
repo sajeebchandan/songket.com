@@ -55,7 +55,7 @@
                         </td>
                         <td>
                             <br />
-                            <asp:Image ID="Image2" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("username") %>' Width="250px" Height="250px" CssClass="ImageStyle" />
+                            <asp:Image ID="Image2" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' Width="250px" Height="250px" CssClass="ImageStyle" />
                             <asp:Label ID="LabelUsernameHidden" runat="server" Text='<%# Eval("username") %>' Visible="False"></asp:Label>
                         </td>
                         <td>&nbsp;</td>
@@ -200,7 +200,7 @@
                 <table class="auto-style1">
                     <tr>
                         <td class="auto-style7">
-                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("username") %>' Width="250px" CssClass="ImageStyle" Height="250px" />
+                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' Width="250px" CssClass="ImageStyle" Height="250px" />
                         </td>
                     </tr>
                     <tr>

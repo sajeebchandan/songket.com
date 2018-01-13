@@ -100,7 +100,7 @@
                     </tr>
                     <tr>
                         <td class="auto-style2">
-                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# "GetBlogImage.aspx?B_Title=" + HttpUtility.UrlEncode( Eval("B_Title").ToString()) %>' Width="640px" CommandName="viewbyimage" CssClass="ImageStyle" />
+                            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetBlogImageString64(HttpUtility.UrlEncode( Eval("B_Title").ToString())) %>' Width="640px" CommandName="viewbyimage" CssClass="ImageStyle" />
                         </td>
                     </tr>
                 </table>

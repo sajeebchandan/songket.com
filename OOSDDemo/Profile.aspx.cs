@@ -61,7 +61,7 @@ namespace OOSDDemo
                 string _username = Session["New"].ToString();
                 FillDataList(_username);
             }
-            else if (e.CommandName=="cp")
+            else if (e.CommandName == "cp")
             {
                 Response.Redirect("Change Password.aspx");
             }
@@ -78,7 +78,7 @@ namespace OOSDDemo
                 update_user.DOB = ((TextBox)DataList1.Items[e.Item.ItemIndex].FindControl("TextBoxDOB")).Text;
                 update_user.Squestion = ((DropDownList)DataList1.Items[e.Item.ItemIndex].FindControl("DropDownListSecurityQuestion")).SelectedValue;
                 update_user.Sanswer = ((TextBox)DataList1.Items[e.Item.ItemIndex].FindControl("TextBoxSecurityAnswer")).Text;
-                
+
                 #region Image File Processor
                 HttpPostedFile postedfile = ((FileUpload)DataList1.Items[e.Item.ItemIndex].FindControl("FileUpload1")).PostedFile;
                 string fileName = Path.GetFileName(postedfile.FileName);
@@ -155,6 +155,36 @@ namespace OOSDDemo
                     LabelMessage.Text = "Please answer to your security question";
                     LabelMessage.ForeColor = System.Drawing.Color.Red;
                 }
+            }
+        }
+
+        public string GetImageStringBase64(string _username)
+        {
+            //string _username = Server.UrlDecode(Request.QueryString["username"]);
+
+            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string sqlCommand = "SELECT photo FROM Users WHERE username = @username";
+
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand com = new SqlCommand(sqlCommand, con);
+
+            com.Parameters.AddWithValue("@username", _username);
+
+            con.Open();
+            SqlDataReader r = com.ExecuteReader();
+
+            if (r.Read())
+            {
+                byte[] imgData = (byte[])r["photo"];
+                string strBase64 = Convert.ToBase64String(imgData);
+                //Image1.ImageUrl = "data:Image/jpg;base64," + strBase64;
+                //Response.BinaryWrite(imgData);
+                return strBase64;
+            }
+            else
+            {
+                con.Close();
+                return "";
             }
         }
     }

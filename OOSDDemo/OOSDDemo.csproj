@@ -90,8 +90,6 @@
     <Content Include="Blogs.aspx" />
     <Content Include="Captcha.aspx" />
     <Content Include="Css\bootstrap.min.css" />
-    <Content Include="GetBlogImage.aspx" />
-    <Content Include="GetImage.aspx" />
     <Content Include="GetProfile.aspx" />
     <Content Include="Global.asax" />
     <Content Include="JS\jquery-2.2.3.min.js" />
@@ -283,20 +281,6 @@
     </Compile>
     <Compile Include="Forgotten Account\Security Answer.aspx.designer.cs">
       <DependentUpon>Security Answer.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GetBlogImage.aspx.cs">
-      <DependentUpon>GetBlogImage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GetBlogImage.aspx.designer.cs">
-      <DependentUpon>GetBlogImage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GetImage.aspx.cs">
-      <DependentUpon>GetImage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GetImage.aspx.designer.cs">
-      <DependentUpon>GetImage.aspx</DependentUpon>
     </Compile>
     <Compile Include="GetProfile.aspx.cs">
       <DependentUpon>GetProfile.aspx</DependentUpon>

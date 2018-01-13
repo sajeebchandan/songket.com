@@ -64,5 +64,32 @@ namespace OOSDDemo
                 }
             }
         }
+
+        public string GetBlogImageString64(string _BlogTitle)
+        {
+
+            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string sqlCommand = "SELECT B_Image FROM BlogTable WHERE B_Title = @B_Title";
+
+            SqlConnection con = new SqlConnection(connectionString);
+            SqlCommand com = new SqlCommand(sqlCommand, con);
+
+            com.Parameters.AddWithValue("@B_Title", Server.UrlDecode(_BlogTitle));
+
+            con.Open();
+            SqlDataReader r = com.ExecuteReader();
+
+            if (r.Read())
+            {
+                byte[] imgData = (byte[])r["B_Image"];
+                string strBase64 = Convert.ToBase64String(imgData);
+                return strBase64;
+            }
+            else
+            {
+                con.Close();
+                return "";
+            }
+        }
     }
 }

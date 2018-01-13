@@ -28,7 +28,7 @@
                 <table class="auto-style1">
                     <tr>
                         <td class="auto-style3">
-                            <asp:Image ID="Image1" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("username") %>' CssClass="ImageStyle" />
+                            <asp:Image ID="Image1" runat="server" ImageUrl='<%#  "data:Image/jpg;base64,"+Convert.ToBase64String((byte[])Eval("photo")) /*"GetImage.aspx?username=" + Eval("username")*/ %>' CssClass="ImageStyle" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>

@@ -111,7 +111,7 @@
                                     </tr>
                                     <tr>
                                         <td style="width: 55px;">
-                                            <asp:Image ID="ImageParent" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("Username") %>' Width="150px" Height="150px" CssClass="ImageStyle" />
+                                            <asp:Image ID="ImageParent" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' Width="150px" Height="150px" CssClass="ImageStyle" />
                                             <br />
                                             <table class="auto-style1">
                                                 <tr>
@@ -177,7 +177,7 @@
                                                     <table style="margin: 3px 5px; width: 100%;">
                                                         <tr>
                                                             <td style="width: 55px; vertical-align: text-top;">
-                                                                <asp:Image ID="ImageChild" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("Username") %>' Width="100px" Height="100px" CssClass="ImageStyle" />
+                                                                <asp:Image ID="ImageChild" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' Width="100px" Height="100px" CssClass="ImageStyle" />
                                                                 <table class="auto-style1">
                                                                     <tr>
                                                                         <td>
@@ -221,7 +221,7 @@
                                                                                             <table style="margin: 3px 5px; width: 100%;">
                                                                                                 <tr>
                                                                                                     <td style="width: 55px; vertical-align: text-top;">
-                                                                                                        <asp:Image ID="ImageChild" runat="server" ImageUrl='<%# "GetImage.aspx?username=" + Eval("Username") %>' Width="50px" Height="50px" CssClass="ImageStyle" />
+                                                                                                        <asp:Image ID="ImageChild" runat="server" ImageUrl='<%# "data:Image/jpg;base64," + GetImageStringBase64(Eval("username").ToString()) %>' Width="50px" Height="50px" CssClass="ImageStyle" />
                                                                                                         <table class="auto-style1">
                                                                                                             <tr>
                                                                                                                 <td>
