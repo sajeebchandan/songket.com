@@ -485,7 +485,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49716</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49716/</IISUrl>
+          <IISUrl>http://localhost:50716/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

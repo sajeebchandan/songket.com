@@ -2,3 +2,13 @@ F:\IDEs\Visual Studio 2015\Object Oriented Software Development Demo\OOSDDemo\Sa
 F:\IDEs\Visual Studio 2015\Object Oriented Software Development Demo\OOSDDemo\SampleHash\bin\Debug\SampleHash.pdb
 F:\IDEs\Visual Studio 2015\Object Oriented Software Development Demo\OOSDDemo\SampleHash\obj\Debug\SampleHash.dll
 F:\IDEs\Visual Studio 2015\Object Oriented Software Development Demo\OOSDDemo\SampleHash\obj\Debug\SampleHash.pdb
+G:\IDEs\git\OOSDDemo\SampleHash\bin\Debug\SampleHash.dll
+G:\IDEs\git\OOSDDemo\SampleHash\bin\Debug\SampleHash.pdb
+G:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.csprojResolveAssemblyReference.cache
+G:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.dll
+G:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.pdb
+H:\IDEs\git\OOSDDemo\SampleHash\bin\Debug\SampleHash.dll
+H:\IDEs\git\OOSDDemo\SampleHash\bin\Debug\SampleHash.pdb
+H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.csprojResolveAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.dll
+H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.pdb

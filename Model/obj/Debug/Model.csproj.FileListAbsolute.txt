@@ -3,3 +3,13 @@ D:\OOSDDemo\Model\bin\Debug\Model.pdb
 D:\OOSDDemo\Model\obj\Debug\Model.dll
 D:\OOSDDemo\Model\obj\Debug\Model.pdb
 D:\OOSDDemo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+G:\IDEs\git\OOSDDemo\Model\bin\Debug\Model.dll
+G:\IDEs\git\OOSDDemo\Model\bin\Debug\Model.pdb
+G:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+G:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.dll
+G:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.pdb
+H:\IDEs\git\OOSDDemo\Model\bin\Debug\Model.dll
+H:\IDEs\git\OOSDDemo\Model\bin\Debug\Model.pdb
+H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.dll
+H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.pdb

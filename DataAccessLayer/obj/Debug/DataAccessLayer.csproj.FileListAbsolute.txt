@@ -18,3 +18,13 @@ D:\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 D:\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+G:\IDEs\git\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+G:\IDEs\git\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+G:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+G:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+G:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+H:\IDEs\git\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+H:\IDEs\git\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
