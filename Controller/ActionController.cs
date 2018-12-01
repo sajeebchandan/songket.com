@@ -44,10 +44,6 @@ namespace Controller
             else
                 return 0;
         }
-
-
-
-
         public static int SendMessage(Model_Message SendMessage)
         {
             string SQL = "INSERT INTO inbox (Username, textmessage, senttime, sender) VALUES (@Username, @textmessage, @Senttime, @Sender)";
@@ -55,9 +51,9 @@ namespace Controller
             cmd.Parameters.AddWithValue("@Username", SendMessage.Username);
             cmd.Parameters.AddWithValue("@textmessage", SendMessage.Message);
             cmd.Parameters.AddWithValue("@Senttime", SendMessage.Senttime);
-            
 
-            if (SendMessage.Sender == null || SendMessage.Sender=="")
+
+            if (SendMessage.Sender == null || SendMessage.Sender == "")
             {
                 cmd.Parameters.AddWithValue("@Sender", "Anonymous");
                 if (DataAccess.ExecuteNonQuery(cmd) > 0)
@@ -70,21 +66,16 @@ namespace Controller
             }
 
             else if (SendMessage.Sender != null)
-            
+
                 cmd.Parameters.AddWithValue("@Sender", SendMessage.Sender);
-                if (DataAccess.ExecuteNonQuery(cmd) > 0)
-                {
-                    return 1;
-                }
-                else
-                    return 0;
-            
+            if (DataAccess.ExecuteNonQuery(cmd) > 0)
+            {
+                return 1;
+            }
+            else
+                return 0;
+
         }
-
-
-
-
-
         public static int SaveBlog(Model_User _UserRegister, Model_Blog _BlogSave)
         {
             string SQL = "INSERT INTO BlogTable (Username, Name, B_Category, B_Title, B_Post, B_Image, B_File, B_FileName, B_Date) VALUES(@username, @name, @bCategory, @bTitle, @bPost, @bImage, @bFile, @bFileName, @bDate)";
@@ -110,9 +101,6 @@ namespace Controller
             else
                 return 0;
         }
-
-
-
         public static int UserAvailability(string username)
         {
             string SQL = "SELECT COUNT (*) FROM Users WHERE username=@username";
@@ -122,7 +110,6 @@ namespace Controller
             int existanceNumber = Convert.ToInt32(DataAccess.ExecuteScalar(cmd));
             return existanceNumber;
         }
-
         public static int BlogTitleAvailability(string blogTitle)
         {
             string SQL = "SELECT COUNT (*) FROM BlogTable WHERE B_Title=@B_Title";
@@ -132,7 +119,6 @@ namespace Controller
             int existanceNumber = Convert.ToInt32(DataAccess.ExecuteScalar(cmd));
             return existanceNumber;
         }
-
         public static int NameAvailability(string name, string username)
         {
             string SQL = "SELECT COUNT (*) FROM Users WHERE name=@name AND username=@username";
@@ -143,7 +129,6 @@ namespace Controller
             int existanceNumber = Convert.ToInt32(DataAccess.ExecuteScalar(cmd));
             return existanceNumber;
         }
-
         public static int NameAvailabilityCore(string name)
         {
             string SQL = "SELECT COUNT (*) FROM Users WHERE name=@name";
@@ -154,7 +139,6 @@ namespace Controller
             int existanceNumber = Convert.ToInt32(DataAccess.ExecuteScalar(cmd));
             return existanceNumber;
         }
-
         public static int UpdateRegister(Model_User _UserUpdate)
         {
             _UserUpdate.Sanswer = SampleHash.SampleHash.ComputeHash(_UserUpdate.Sanswer, "SHA256", null);
@@ -171,7 +155,7 @@ namespace Controller
             cmd.Parameters.AddWithValue("@Session_Username", _UserUpdate.Username);
 
 
-            if (NameAvailability(_UserUpdate.Name, _UserUpdate.Username) == 1 || NameAvailabilityCore(_UserUpdate.Name)==0)
+            if (NameAvailability(_UserUpdate.Name, _UserUpdate.Username) == 1 || NameAvailabilityCore(_UserUpdate.Name) == 0)
             {
                 if (DataAccess.ExecuteNonQuery(cmd) > 0)
                 {
@@ -183,9 +167,8 @@ namespace Controller
             else
                 return 0;
         }
-
-
-        public static bool CheckLogin(string username, string password) //these parameters will keep passing the value of user's input into the selected field!
+        //these parameters will keep passing the value of user's input into the selected field!
+        public static bool CheckLogin(string username, string password)
         {
             string sqlSUCKER = string.Format("SELECT pass FROM Users WHERE username = @username");
             SqlCommand cmd = new SqlCommand(sqlSUCKER);
@@ -206,8 +189,6 @@ namespace Controller
             else
                 return false;
         }
-
-
         public static string GetImage(string username)
         {
             byte[] ImageByte;
@@ -226,8 +207,6 @@ namespace Controller
             else
                 return null;
         }
-
-
         public static Tuple<string, string, string, string, string, string> Get(string username)
         {
             Model_User _User = new Model_User();
@@ -252,7 +231,6 @@ namespace Controller
             }
             return new Tuple<string, string, string, string, string, string>(_User.Name, _User.Email, _User.Gender, _User.Country, _User.DOB, _User.Squestion);
         }
-
         public static string GetName(string username)
         {
             string Name;
@@ -260,7 +238,7 @@ namespace Controller
             SqlCommand cmd = new SqlCommand(SQL);
             cmd.Parameters.AddWithValue("@username", username);
             DataTable dtName = new DataTable();
-            dtName= DataAccess.ExecuteReader(cmd);
+            dtName = DataAccess.ExecuteReader(cmd);
             Name = (string)dtName.Rows[0]["name"];
             if (Name != null)
             {
@@ -269,7 +247,6 @@ namespace Controller
             else
                 return null;
         }
-
         public static DataSet DataSet_Profile(string username)
         {
             string SQL = "SELECT name, username, email, gender, country, dob, photo, securityquestion FROM Users WHERE username = @Username";
@@ -294,7 +271,6 @@ namespace Controller
             da.Fill(ds);
             return ds;
         }
-
         public static byte[] GetImageByte(string username)
         {
             byte[] ImageByte;

@@ -28,7 +28,7 @@ namespace OOSDDemo.Forgotten_Account
             SqlCommand cmd;
             string HashedNewPassword = SampleHash.SampleHash.ComputeHash(TextBoxConfirmNewPassword.Text, "SHA256", null);
             conn = new SqlConnection(connectionString);
-            string sqlCHANGEPASSWORD = "UPDATE Register SET pass=@pass WHERE username=@username";
+            string sqlCHANGEPASSWORD = "UPDATE Users SET pass=@pass WHERE username=@username";
 
             conn.Open();
             cmd = new SqlCommand(sqlCHANGEPASSWORD, conn);

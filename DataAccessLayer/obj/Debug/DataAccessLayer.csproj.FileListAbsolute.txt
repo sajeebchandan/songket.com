@@ -25,6 +25,6 @@ G:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 G:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 H:\IDEs\git\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 H:\IDEs\git\OOSDDemo\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
-H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+H:\IDEs\git\OOSDDemo\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache

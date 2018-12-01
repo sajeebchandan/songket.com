@@ -154,7 +154,7 @@ namespace OOSDDemo
         {
             //string _username = Server.UrlDecode(Request.QueryString["username"]);
 
-            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string connectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog=TEST; Integrated Security=True";
             string sqlCommand = "SELECT photo FROM Users WHERE username = @username";
 
             SqlConnection con = new SqlConnection(connectionString);

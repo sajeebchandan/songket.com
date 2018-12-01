@@ -18,7 +18,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin-left: 500px; float: left">
-        <div style="margin-left:0px, auto; float:left">
+        <div style="margin-left:52px; float:left">
             <h2>
                 <asp:Label ID="LabelName" runat="server" Text="?"></asp:Label>
             </h2>

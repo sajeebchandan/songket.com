@@ -10,6 +10,7 @@ G:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.dll
 G:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.pdb
 H:\IDEs\git\OOSDDemo\Model\bin\Debug\Model.dll
 H:\IDEs\git\OOSDDemo\Model\bin\Debug\Model.pdb
-H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.csprojAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.dll
 H:\IDEs\git\OOSDDemo\Model\obj\Debug\Model.pdb

@@ -28,6 +28,6 @@ H:\IDEs\git\OOSDDemo\Controller\bin\Debug\SampleHash.dll
 H:\IDEs\git\OOSDDemo\Controller\bin\Debug\DataAccessLayer.pdb
 H:\IDEs\git\OOSDDemo\Controller\bin\Debug\Model.pdb
 H:\IDEs\git\OOSDDemo\Controller\bin\Debug\SampleHash.pdb
-H:\IDEs\git\OOSDDemo\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache
 H:\IDEs\git\OOSDDemo\Controller\obj\Debug\Controller.dll
 H:\IDEs\git\OOSDDemo\Controller\obj\Debug\Controller.pdb
+H:\IDEs\git\OOSDDemo\Controller\obj\Debug\Controller.csprojResolveAssemblyReference.cache

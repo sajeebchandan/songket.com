@@ -48,7 +48,7 @@ namespace OOSDDemo
         {
             //string _username = Server.UrlDecode(Request.QueryString["username"]);
 
-            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string connectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog=TEST; Integrated Security=True";
             string sqlCommand = "SELECT photo FROM Users WHERE username = @username";
 
             SqlConnection con = new SqlConnection(connectionString);
@@ -77,7 +77,7 @@ namespace OOSDDemo
         public string GetBlogImageString64(string _BlogTitle)
         {
 
-            string connectionString = "Data Source=.; Initial Catalog=TEST; Integrated Security=True";
+            string connectionString = "Data Source=.\\SQLEXPRESS; Initial Catalog=TEST; Integrated Security=True";
             string sqlCommand = "SELECT B_Image FROM BlogTable WHERE B_Title = @B_Title";
 
             SqlConnection con = new SqlConnection(connectionString);

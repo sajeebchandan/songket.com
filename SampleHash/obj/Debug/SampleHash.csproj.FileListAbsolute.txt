@@ -9,6 +9,7 @@ G:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.dll
 G:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.pdb
 H:\IDEs\git\OOSDDemo\SampleHash\bin\Debug\SampleHash.dll
 H:\IDEs\git\OOSDDemo\SampleHash\bin\Debug\SampleHash.pdb
-H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.csprojResolveAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.csprojAssemblyReference.cache
+H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.csproj.CoreCompileInputs.cache
 H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.dll
 H:\IDEs\git\OOSDDemo\SampleHash\obj\Debug\SampleHash.pdb

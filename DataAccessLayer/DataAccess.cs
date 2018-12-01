@@ -11,7 +11,7 @@ namespace DataAccessLayer
 {
     public static class DataAccess
     {
-        public static SqlConnection con = new SqlConnection("Data Source=.; Initial Catalog=TEST; Integrated Security=True");
+        public static SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS; Initial Catalog=TEST; Integrated Security=True");
 
         public static SqlConnection GetCon()
         {
